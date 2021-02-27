@@ -3,6 +3,7 @@ package com.ctt.uatzapi.model
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.uatzapi.R
@@ -14,6 +15,7 @@ class ConversasAdapter(private val listaContatos: MutableList<Contato>) : Recycl
         val nomeContato: TextView = view.findViewById(R.id.txtContato)
         val ultimaMensagem: TextView = view.findViewById(R.id.txtMensagem)
         val horaMensagem: TextView = view.findViewById(R.id.txtHorario)
+        val fotoContato: ImageView =view.findViewById(R.id.imgContato)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -23,6 +25,9 @@ class ConversasAdapter(private val listaContatos: MutableList<Contato>) : Recycl
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        listaContatos[position].imagem?.let{
+            holder.fotoContato.setImageBitmap(it)
+        }
         holder.nomeContato.text= listaContatos[position].nome
         holder.ultimaMensagem.text=listaContatos[position].ultimaMensagem
         holder.horaMensagem.text=listaContatos[position].horarioMensagem

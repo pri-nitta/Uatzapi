@@ -2,6 +2,7 @@ package com.ctt.uatzapi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.uatzapi.model.Contato
 import com.ctt.uatzapi.model.ConversasAdapter
@@ -33,5 +34,6 @@ class MainActivity : AppCompatActivity() {
 
         val rvConversas = findViewById<RecyclerView>(R.id.listaContatos)
         rvConversas.adapter = ConversasAdapter(listaConversa)
+        rvConversas.layoutManager = LinearLayoutManager(this)
     }
 }
