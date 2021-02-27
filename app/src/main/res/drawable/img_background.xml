@@ -2,10 +2,9 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
 android:shape="oval"
 android:innerRadius="2dp">
-    <gradient
-            android:centerColor="@color/colorPrimary"
-            android:startColor="@color/colorAccent"
-            android:endColor="@color/titulocontato"
-    ></gradient>
+
+<solid
+        android:color="#A5A3A6"
+></solid>
 
 </shape>
