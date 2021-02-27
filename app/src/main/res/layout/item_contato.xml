@@ -16,7 +16,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:background="#02574F"/>
+            android:background="@drawable/img_background"/>
 
     <TextView
             android:id="@+id/txtContato"
