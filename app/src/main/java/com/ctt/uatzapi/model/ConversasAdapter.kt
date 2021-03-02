@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.ctt.uatzapi.MainActivity
 import com.ctt.uatzapi.R
 import com.ctt.uatzapi.model.Contato
 
@@ -17,6 +18,11 @@ class ConversasAdapter(private val listaContatos: MutableList<Contato>) : Recycl
         val horaMensagem: TextView = view.findViewById(R.id.txtHorario)
         val fotoContato: ImageView =view.findViewById(R.id.imgContato)
     }
+ fun adicionarContato(novoContato: Contato ){
+     listaContatos.add(novoContato)
+     //MainActivity.listaConversaEstatica.add(novoContato)
+     notifyDataSetChanged()
+ }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).

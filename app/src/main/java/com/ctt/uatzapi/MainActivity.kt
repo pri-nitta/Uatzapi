@@ -2,6 +2,7 @@ package com.ctt.uatzapi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.uatzapi.model.Contato
@@ -33,7 +34,22 @@ class MainActivity : AppCompatActivity() {
         )
 
         val rvConversas = findViewById<RecyclerView>(R.id.listaContatos)
-        rvConversas.adapter = ConversasAdapter(listaConversa)
+        val addContato = findViewById<Button>(R.id.btnAdd)
+
+        val adapterContato = ConversasAdapter(listaConversa)
+        rvConversas.adapter = adapterContato
+
+        addContato.setOnClickListener{
+            adapterContato.adicionarContato(
+                Contato(imagem = null, nome = "Ana", ultimaMensagem = "Vou desinstalar o IntelliJ!", horarioMensagem = "7:00 pm" )
+            )
+        }
+
         rvConversas.layoutManager = LinearLayoutManager(this)
-    }
+
+        }
+//        companion object{
+//            const val CHAVE_INTENT = "chaveIntent"
+//            val listaConversaEstatica = mutableListOf<Contato>()
+ //   }
 }
