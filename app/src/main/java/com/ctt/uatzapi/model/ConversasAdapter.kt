@@ -16,8 +16,7 @@ class ConversasAdapter(private val listaContatos: MutableList<Contato>) : Recycl
         val nomeContato: TextView = view.findViewById(R.id.txtContato)
         val ultimaMensagem: TextView = view.findViewById(R.id.txtMensagem)
         val horaMensagem: TextView = view.findViewById(R.id.txtHorario)
-        val fotoContato
-        : ImageView =view.findViewById(R.id.imgContato)
+        val fotoContato: ImageView =view.findViewById(R.id.imgContato)
     }
  fun adicionarContato(novoContato: Contato ){
      listaContatos.add(novoContato)
@@ -40,5 +39,4 @@ class ConversasAdapter(private val listaContatos: MutableList<Contato>) : Recycl
     }
 
     override fun getItemCount(): Int = listaContatos.size
-
 }
