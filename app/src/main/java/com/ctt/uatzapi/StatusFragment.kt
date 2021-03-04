@@ -1,13 +1,12 @@
 package com.ctt.uatzapi
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.ctt.uatzapi.model.Contato
-import com.ctt.uatzapi.model.ConversasAdapter
+import com.ctt.uatzapi.model.StatusAdapter
 import com.ctt.uatzapi.model.Status
 
 class StatusFragment : Fragment() {
@@ -43,7 +42,9 @@ class StatusFragment : Fragment() {
 
         val rvStatus = view.findViewById<RecyclerView>(R.id.listaStatus)
 
-        val adapterStatus = ConversasAdapter(listaStatus)
+        val adapterStatus = StatusAdapter(listaStatus)
         rvStatus.adapter = adapterStatus
+
+        rvStatus.layoutManager = LinearLayoutManager(requireContext())
     }
 }

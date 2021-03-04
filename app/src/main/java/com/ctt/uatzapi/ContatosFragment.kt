@@ -47,6 +47,8 @@ class ContatosFragment : Fragment() {
 
         val adapterContato = ConversasAdapter(listaConversa)
         rvConversas.adapter = adapterContato
+
+        rvConversas.layoutManager = LinearLayoutManager(requireContext())
     }
 
 }

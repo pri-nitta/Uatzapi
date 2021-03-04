@@ -21,7 +21,6 @@ class ConversasAdapter(private val listaContatos: MutableList<Contato>) : Recycl
     }
  fun adicionarContato(novoContato: Contato ){
      listaContatos.add(novoContato)
-     MainActivity.listaConversaEstatica.add(novoContato)
      notifyDataSetChanged()
  }
 
@@ -41,5 +40,5 @@ class ConversasAdapter(private val listaContatos: MutableList<Contato>) : Recycl
     }
 
     override fun getItemCount(): Int = listaContatos.size
-    }
+
 }

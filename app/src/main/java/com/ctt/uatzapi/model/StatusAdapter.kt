@@ -34,4 +34,3 @@ class StatusAdapter(private val listaStatus: MutableList<Status>) : RecyclerView
 
     override fun getItemCount(): Int = listaStatus.size
 }
-}
