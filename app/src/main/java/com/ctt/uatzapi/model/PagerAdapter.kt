@@ -3,7 +3,9 @@ package com.ctt.uatzapi.model
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.fragment.app.FragmentManager
+import com.ctt.uatzapi.ChamadasFragment
 import com.ctt.uatzapi.ContatosFragment
+import com.ctt.uatzapi.StatusFragment
 
 class PagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
 
@@ -17,8 +19,8 @@ class PagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(frag
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> ContatosFragment()
-            1 -> ContatosFragment()
-            2 -> ContatosFragment()
+            1 -> StatusFragment()
+            2 -> ChamadasFragment()
             else -> ContatosFragment()
         }
     }

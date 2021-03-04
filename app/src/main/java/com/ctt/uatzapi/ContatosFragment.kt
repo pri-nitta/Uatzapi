@@ -20,7 +20,6 @@ class ContatosFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_contatos, container, false)
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -48,8 +47,6 @@ class ContatosFragment : Fragment() {
 
         val adapterContato = ConversasAdapter(listaConversa)
         rvConversas.adapter = adapterContato
-
-        rvConversas.layoutManager = LinearLayoutManager()
     }
 
 }

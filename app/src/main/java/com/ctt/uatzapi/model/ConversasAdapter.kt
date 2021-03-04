@@ -10,27 +10,28 @@ import com.ctt.uatzapi.MainActivity
 import com.ctt.uatzapi.R
 import com.ctt.uatzapi.model.Contato
 
-class ConversasAdapter(private val listaContatos: MutableList<Contato>) : RecyclerView.Adapter<ConversasAdapter.ViewHolder>(){
+class ConversasAdapter(private val listaContatos: MutableList<Contato>) : RecyclerView.Adapter<ConversasAdapter.ConversaHolder>(){
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ConversaHolder(view: View) : RecyclerView.ViewHolder(view) {
         val nomeContato: TextView = view.findViewById(R.id.txtContato)
         val ultimaMensagem: TextView = view.findViewById(R.id.txtMensagem)
         val horaMensagem: TextView = view.findViewById(R.id.txtHorario)
-        val fotoContato: ImageView =view.findViewById(R.id.imgContato)
+        val fotoContato
+        : ImageView =view.findViewById(R.id.imgContato)
     }
  fun adicionarContato(novoContato: Contato ){
      listaContatos.add(novoContato)
-     //MainActivity.listaConversaEstatica.add(novoContato)
+     MainActivity.listaConversaEstatica.add(novoContato)
      notifyDataSetChanged()
  }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ConversaHolder {
         val view = LayoutInflater.from(parent.context).
         inflate(R.layout.item_contato, parent, false) //pode quebrar o app se for true
-        return ViewHolder(view)
+        return ConversaHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ConversaHolder, position: Int) {
         listaContatos[position].imagem?.let{
             holder.fotoContato.setImageBitmap(it)
         }
@@ -39,7 +40,6 @@ class ConversasAdapter(private val listaContatos: MutableList<Contato>) : Recycl
         holder.horaMensagem.text=listaContatos[position].horarioMensagem
     }
 
-    override fun getItemCount(): Int {
-        return listaContatos.size
+    override fun getItemCount(): Int = listaContatos.size
     }
 }

@@ -2,12 +2,7 @@ package com.ctt.uatzapi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
-import com.ctt.uatzapi.model.Contato
-import com.ctt.uatzapi.model.ConversasAdapter
 import com.ctt.uatzapi.model.PagerAdapter
 import com.google.android.material.tabs.TabLayout
 
@@ -22,4 +17,5 @@ class MainActivity : AppCompatActivity() {
 
         viewPager.adapter = PagerAdapter(supportFragmentManager)
         tabLayout.setupWithViewPager(viewPager)
+    }
 }
