@@ -10,9 +10,10 @@
     <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:background="@color/colorPrimaryDark"
-            android:textColor="@color/branco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:tabTextColor="@color/colorAccent"
+            app:tabSelectedTextColor="@color/branco"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
