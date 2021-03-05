@@ -1,20 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".StatusFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/txtMyStatus"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:id="@+id/imgStatus"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/img_background"
+                android:foreground="@mipmap/me"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:id="@+id/txtNome"
+                android:textColor="@color/titulocontato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/txt_my_status"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgStatus"/>
+        <TextView
+                android:id="@+id/txtHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginStart="15dp"
+                android:text="@string/txt_tap_to_add_status_update"
+                app:layout_constraintTop_toBottomOf="@+id/txtNome"
+                app:layout_constraintStart_toEndOf="@+id/imgStatus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+            android:id="@+id/txt_recent"
+            android:layout_marginTop="80dp"
+            android:text="@string/txt_recent_updates"
+            android:background="@color/cinza"
+            android:layout_width="match_parent"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:layout_height="30dp"
+            tools:ignore="RtlSymmetry"/>
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listaStatus"
+            android:layout_marginTop="110dp"
             android:layout_height="match_parent"
             android:layout_width="match_parent">
     </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+            android:foreground="@drawable/ic_camera"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="650dp"
+            android:foregroundTint="@color/branco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/btn_status"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="650dp"
+            android:layout_width="50dp"
+            android:background="@drawable/img_button"
+            android:layout_height="50dp"/>
 
 </FrameLayout>

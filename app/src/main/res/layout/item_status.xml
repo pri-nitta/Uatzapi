@@ -5,8 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="150dp"
-        android:background="#E6E8E8">
+        android:layout_marginTop="150dp">
 
     <ImageView
             android:id="@+id/imgStatus"
@@ -25,7 +24,7 @@
             android:textColor="@color/titulocontato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="20dp"
             android:textSize="18sp"
             tools:text="Pri"
             app:layout_constraintTop_toTopOf="@+id/imgStatus"
