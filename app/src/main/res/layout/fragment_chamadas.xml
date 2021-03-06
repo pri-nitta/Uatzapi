@@ -5,14 +5,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:textColor="@color/branco"
         tools:context=".ChamadasFragment">
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listaChamadas"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            tools:listitem="@layout/item_chamadas"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

@@ -24,19 +24,24 @@ class StatusFragment : Fragment() {
 
         val listaStatus = mutableListOf<Status>(
             Status(
-                imagem = null,
-                nome = "Rodrigo",
-                hora = "Today, 19:31"
+                imagemS = null,
+                nomeS = "Rodrigo",
+                horaS = "Today, 19:31"
             ),
             Status(
-                imagem = null,
-                nome = "Suzy",
-                hora = "Today, 15:45"
+                imagemS = null,
+                nomeS = "Suzy",
+                horaS = "Today, 15:45"
             ),
             Status(
-                imagem = null,
-                nome = "Carol",
-                hora = "Today, 08:04"
+                imagemS = null,
+                nomeS = "Carol",
+                horaS = "Today, 08:04"
+            ),
+            Status(
+                imagemS = null,
+                nomeS = "Jessany",
+                horaS = "Yesterday, 21:00"
             )
         )
 

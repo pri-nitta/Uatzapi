@@ -11,24 +11,23 @@ import com.ctt.uatzapi.R
 class StatusAdapter(private val listaStatus: MutableList<Status>) : RecyclerView.Adapter<StatusAdapter.StatusHolder>(){
 
     class StatusHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val nomeStatus: TextView = view.findViewById(R.id.txtContato)
+        val nomeStatus: TextView = view.findViewById(R.id.txtNome)
         val horaStatus: TextView = view.findViewById(R.id.txtHorario)
-        val fotoStatus
-                : ImageView =view.findViewById(R.id.imgStatus)
+        val fotoStatus: ImageView =view.findViewById(R.id.imgStatus)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StatusHolder {
         val view = LayoutInflater.from(parent.context).
-        inflate(R.layout.item_contato, parent, false)
+        inflate(R.layout.item_status, parent, false)
         return StatusHolder(view)
     }
 
     override fun onBindViewHolder(holder: StatusHolder, position: Int) {
-        listaStatus[position].imagem?.let{
+        listaStatus[position].imagemS?.let{
             holder.fotoStatus.setImageBitmap(it)
         }
-        holder.nomeStatus.text= listaStatus[position].nome
-        holder.horaStatus.text=listaStatus[position].hora
+        holder.nomeStatus.text= listaStatus[position].nomeS
+        holder.horaStatus.text=listaStatus[position].horaS
     }
 
     override fun getItemCount(): Int = listaStatus.size

@@ -27,6 +27,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+
     <ImageView
             android:id="@+id/imgArrow"
             android:src="@drawable/ic_diagonal_arrow"
