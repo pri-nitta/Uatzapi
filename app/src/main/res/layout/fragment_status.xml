@@ -89,14 +89,14 @@
             android:layout_marginBottom="50dp"
             android:layout_height="55dp"/>
 
-    <Button
+    <TextView
             android:id="@+id/btn_plus"
             android:text="@string/txt_plus"
-            android:textStyle="bold"
             android:textColor="@color/branco"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_width="20dp"
             android:layout_gravity="top|start"
+            android:gravity="center"
             android:background="@drawable/img_button"
             android:layout_marginStart="55dp"
             android:layout_marginTop="50dp"

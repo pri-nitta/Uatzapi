@@ -4,8 +4,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="150dp">
+        android:layout_height="80dp">
 
     <ImageView
             android:id="@+id/imgStatus"
@@ -17,9 +16,25 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:src="@drawable/user_foreground"
-            android:background="@drawable/img_status"
+            android:background="@drawable/img_background"
             android:scaleType="center"/>
 
+    <ImageView
+            android:src="@drawable/ic_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+            android:id="@+id/imgArrow"
+            android:src="@drawable/ic_diagonal_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            app:layout_constraintEnd_toStartOf="@+id/txtHorario"
+            app:layout_constraintTop_toBottomOf="@+id/txtNome"/>
     <TextView
             android:id="@+id/txtNome"
             android:textColor="@color/titulocontato"
@@ -27,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:textSize="18sp"
-            tools:text="Pri"
+            tools:text="Eloiza"
             app:layout_constraintTop_toTopOf="@+id/imgStatus"
             app:layout_constraintStart_toEndOf="@+id/imgStatus"
             android:layout_marginTop="8dp"/>
@@ -36,13 +51,12 @@
             android:id="@+id/txtHorario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="35dp"
             android:textSize="12sp"
             android:layout_marginEnd="300dp"
-            tools:text="Today, 20:43"
+            tools:text="Today, 17:42"
             app:layout_constraintTop_toBottomOf="@+id/txtNome"
             app:layout_constraintStart_toEndOf="@+id/imgStatus">
-
     </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
