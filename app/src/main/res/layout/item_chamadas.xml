@@ -7,7 +7,7 @@
         android:layout_height="80dp">
 
     <ImageView
-            android:id="@+id/imgStatus"
+            android:id="@+id/imgCall"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginStart="35dp"
@@ -33,30 +33,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
-            app:layout_constraintEnd_toStartOf="@+id/txtHorario"
-            app:layout_constraintTop_toBottomOf="@+id/txtNome"/>
+            app:layout_constraintEnd_toStartOf="@+id/txtHorarioCall"
+            app:layout_constraintTop_toBottomOf="@+id/txtNomeCall"/>
     <TextView
-            android:id="@+id/txtNome"
+            android:id="@+id/txtNomeCall"
             android:textColor="@color/titulocontato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:textSize="18sp"
             tools:text="Eloiza"
-            app:layout_constraintTop_toTopOf="@+id/imgStatus"
-            app:layout_constraintStart_toEndOf="@+id/imgStatus"
+            app:layout_constraintTop_toTopOf="@+id/imgCall"
+            app:layout_constraintStart_toEndOf="@+id/imgCall"
             android:layout_marginTop="8dp"/>
 
     <TextView
-            android:id="@+id/txtHorario"
+            android:id="@+id/txtHorarioCall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
             android:textSize="12sp"
             android:layout_marginEnd="300dp"
             tools:text="Today, 17:42"
-            app:layout_constraintTop_toBottomOf="@+id/txtNome"
-            app:layout_constraintStart_toEndOf="@+id/imgStatus">
+            app:layout_constraintTop_toBottomOf="@+id/txtNomeCall"
+            app:layout_constraintStart_toEndOf="@+id/imgCall">
     </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
