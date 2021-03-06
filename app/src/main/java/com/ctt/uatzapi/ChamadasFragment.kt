@@ -15,17 +15,17 @@ class ChamadasFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.item_chamadas, container, false)
+        return inflater.inflate(R.layout.fragment_chamadas, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val listaCall = mutableListOf<Call>(
+        val listaChamada = mutableListOf<Call>(
             Call(imagem = null, nome = "Ariane", horario = "Today, 14:00"),
             Call(imagem = null, nome = "Luara", horario = "Today, 10:53")
         )
         val rvCall = view.findViewById<RecyclerView>(R.id.listaChamadas)
-        val adapterCall = CallAdapter(listaCall)
+        val adapterCall = CallAdapter(listaChamada)
         rvCall.adapter = adapterCall
         rvCall.layoutManager = LinearLayoutManager(requireContext())
     }
